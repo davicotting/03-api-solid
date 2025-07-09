@@ -21,9 +21,12 @@ model User {
 
 model Gym {
   id          String    @id @unique @default(uuid())
+  title       String
   name        String
   description String?
   phone       String?
+  latitude    Decimal
+  longitude   Decimal
   CheckIn     CheckIn[]
 
   @@map("gyms")
